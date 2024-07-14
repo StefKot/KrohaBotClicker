@@ -16,6 +16,16 @@
             font-family: 'FulboArgenta', sans-serif;
         }
     </style>
+    <script>
+        // Проверяем, поддерживает ли Telegram Web App расширение окна
+        if (window.Telegram.WebApp.isExpanded) {
+            // Если поддерживается, то расширяем окно
+            window.Telegram.WebApp.expand();
+        } else {
+            // Если не поддерживается, выводим сообщение
+            alert("Telegram Web App не поддерживает расширение окна на этом устройстве.");
+        }
+    </script>
     {% block css %}{% endblock %}
 </head>
 <body>
