@@ -1,0 +1,15 @@
+[Unit]
+Description=Kroha
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/clicker/django/krohasite
+ExecStart=daphne krohasite.asgi:application
+RestartSec=10
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target

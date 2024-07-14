@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Store{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrohaBot - Магазин</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2578ba;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .item {
+            background-color: #eee;
+            padding: 1em;
+            margin: 0.5em;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 0.5em;
+        }
+
+        .item h3 {
+            margin-bottom: 0.2em;
+        }
+
+        .item .price {
+            color: green;
+        }
+
+        .buy-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button {
+                    display: inline-block;
+                    padding: 0.5em 1em;
+                    background-color: #2578ba; 
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
+                .back-button:hover {
+                    background-color: #0056b3; 
+                }
+
+                .back-button::before {
+                    content: "\2190"; 
+                    margin-right: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KrohaBot - Магазин</h1>
+    </header>
+    <main>
+        <a href="/clicker" class="back-button">Назад</a>
+        <div class="shop-container">
+            <div class="item">
+                <img src= "{% static 'diaper.png' %}"
+                    style="max-width: 100%; animation: scale 600ms ease; margin: auto;">
+                <h3>Подгузник</h3>
+                <p class="price">100 золота</p>
+                <a href="#" class="buy-button">Купить</a>
+            </div>
+            <div class="item">
+                <img src= "{% static 'nipple.png' %}"
+                    style="max-width: 100%; animation: scale 600ms ease; margin: auto;">
+                <h3>Соска</h3>
+                <p class="price">200 золота</p>
+                <a href="#" class="buy-button">Купить</a>
+            </div>
+            <div class="item">
+                <img src= "{% static 'baby_bottle.png' %}"
+                    style="max-width: 100%; animation: scale 600ms ease; margin: auto;">
+                <h3>Бутылочка</h3>
+                <p class="price">300 золота</p>
+                <a href="#" class="buy-button">Купить</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+{% endblock %}

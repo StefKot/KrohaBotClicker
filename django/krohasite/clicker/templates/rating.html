@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Store{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrohaBot - Рейтинг</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2578ba;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        .ranking-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f9f9f9;
+        }
+
+        .ranking-table th,
+        .ranking-table td {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            text-align: left;
+        }
+
+        .ranking-table th {
+            background-color: #2578ba;
+        }
+        
+        .ranking-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .back-button {
+                    display: inline-block;
+                    padding: 0.5em 1em;
+                    background-color: #2578ba; 
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
+                .back-button:hover {
+                    background-color: #0056b3; 
+                }
+
+                .back-button::before {
+                    content: "\2190"; 
+                    margin-right: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KrohaBot - Рейтинг</h1>
+    </header>
+    <main>
+        <a href="/clicker" class="back-button">Назад</a>
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Место</th>
+                    <th>Имя пользователя</th>
+                    <th>Уровень</th>
+                    <th>Опыт</th>
+                    <th>Победы</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Степан Котов</td>
+                    <td>50</td>
+                    <td>100000</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Павел Маслюков</td>
+                    <td>45</td>
+                    <td>90000</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Максим Дейнеко</td>
+                    <td>40</td>
+                    <td>80000</td>
+                    <td>300</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
+{% endblock %}
