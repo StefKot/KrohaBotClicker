@@ -1,5 +1,6 @@
 # KrohaBotClicker
 This is a small test clicker for the site [Всё для Крохи](https://www.vsekroham.ru/).
+
 ![image](https://github.com/user-attachments/assets/21442b52-f713-49f2-a0ba-e49e39dcd66b)
 
 
